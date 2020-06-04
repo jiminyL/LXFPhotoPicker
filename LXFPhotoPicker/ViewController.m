@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "LXFPhoto.h"
+
+#import "LXFPhotoPicker.h"
 
 @interface ViewController ()
 
@@ -23,7 +24,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [[LXFPhoto alloc] showInViewController:self withPhotos:nil selectedPhotos:^(NSArray<PHAsset *> * _Nonnull photos) {
+    [[LXFPhotoPicker alloc] showInViewController:self withPhotos:nil maxCount:10 selectedPhotos:^(NSArray<PHAsset *> * _Nonnull photos) {
         
     }];
     

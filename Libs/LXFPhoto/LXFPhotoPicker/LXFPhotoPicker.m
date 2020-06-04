@@ -16,7 +16,7 @@
 
 @implementation LXFPhotoPicker
 
-- (void)showInViewController:(UIViewController *)viewController withPhotos:(NSArray<PHAsset *> *)photos maxCount:(NSInteger)maxCount selectedPhotos:(void (^)(NSArray<PHAsset *> *photos))selectedPhotos{
+- (void)showInViewController:(UIViewController *)viewController withPhotos:(nullable NSArray<PHAsset *> *)photos maxCount:(NSInteger)maxCount selectedPhotos:(void (^)(NSArray<PHAsset *> *photos))selectedPhotos{
     LXFPhotoViewController *photoVC = [[LXFPhotoViewController alloc] initWithPhotos:photos maxCount:maxCount];
     photoVC.didSelectedPhoto = ^(NSArray<PHAsset *> * _Nonnull photos) {
         if (selectedPhotos) {
